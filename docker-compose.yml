@@ -8,7 +8,7 @@ services:
   airflow:
     image: apache/airflow:2.9.0
     environment:
-      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__EXECUTOR=SequentialExecutor
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:////opt/airflow/airflow.db
     volumes:
       - ./airflow/dags:/opt/airflow/dags
