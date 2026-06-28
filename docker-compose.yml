@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  extractor:
+    build: .
+    env_file:
+      - .env
+
+  airflow:
+    image: apache/airflow:2.9.0
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:////opt/airflow/airflow.db
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+    ports:
+      - "8080:8080"
+    command: standalone
