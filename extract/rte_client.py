@@ -19,6 +19,7 @@ def get_token():
             "Content-Type": "application/x-www-form-urlencoded"
         }
     )
+    print(f"Token response: {response.json()}")
     return response.json()["access_token"]
 
 def get_production_data(token):
