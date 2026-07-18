@@ -45,7 +45,7 @@ def energy_pipeline():
                     "updated_date": value.get("updated_date"),
                     "value_mw": value["value"]
                 })
-        
+        client.query(f"DELETE FROM `{table_id}` WHERE DATE(start_date) = CURRENT_DATE()").result()
         errors = client.insert_rows_json(table_id, rows)
         if errors:
             raise Exception(f"BigQuery insert errors: {errors}")
