@@ -30,10 +30,10 @@ def energy_pipeline():
     @task()
     def load(data):
         from google.cloud import bigquery
-        
+
         client = bigquery.Client(project="project-da2d9305-97cf-4aec-9f3")
         table_id = "project-da2d9305-97cf-4aec-9f3.energy_data.production_by_type"
-        
+
         rows = []
         for item in data["actual_generations_per_production_type"]:
             production_type = item["production_type"]
@@ -45,11 +45,21 @@ def energy_pipeline():
                     "updated_date": value.get("updated_date"),
                     "value_mw": value["value"]
                 })
-        client.query(f"DELETE FROM `{table_id}` WHERE DATE(start_date) = CURRENT_DATE()").result()
-        errors = client.insert_rows_json(table_id, rows)
-        if errors:
-            raise Exception(f"BigQuery insert errors: {errors}")
-        
+
+        job_config = bigquery.LoadJobConfig(
+            write_disposition="WRITE_TRUNCATE",
+            schema=[
+                bigquery.SchemaField("production_type", "STRING"),
+                bigquery.SchemaField("start_date", "TIMESTAMP"),
+                bigquery.SchemaField("end_date", "TIMESTAMP"),
+                bigquery.SchemaField("updated_date", "TIMESTAMP"),
+                bigquery.SchemaField("value_mw", "INTEGER"),
+            ]
+        )
+
+        job = client.load_table_from_json(rows, table_id, job_config=job_config)
+        job.result()
+
         print(f"Inserted {len(rows)} rows into BigQuery")
         return len(rows)
 
