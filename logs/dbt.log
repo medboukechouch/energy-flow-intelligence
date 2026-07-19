@@ -1,0 +1,162 @@
+[0m18:31:53.834928 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1f97903770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1f99732710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1f9604b9d0>]}
+
+
+============================== 18:31:53.844728 | 8114c437-5273-4380-8375-75cf512c8591 ==============================
+[0m18:31:53.844728 [info ] [MainThread]: Running with dbt=1.12.0
+[0m18:31:53.846404 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/home/mohamed/.dbt', 'use_experimental_parser': 'False', 'log_path': 'logs', 'empty': 'None', 'debug': 'False', 'cache_selected_only': 'False', 'invocation_command': 'dbt init energy-flow', 'static_parser': 'True', 'log_format': 'default', 'printer_width': '80', 'introspect': 'True', 'version_check': 'True', 'fail_fast': 'False', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'indirect_selection': 'eager', 'no_print': 'None', 'log_cache_events': 'False', 'hints_enabled': 'True', 'warn_error': 'None', 'target_path': 'None', 'partial_parse': 'True'}
+[0m18:31:53.970769 [info ] [MainThread]: Creating dbt configuration folder at /home/mohamed/.dbt
+[0m18:32:41.993334 [debug] [MainThread]: Starter project path: /home/mohamed/airflow-env/lib/python3.14/site-packages/dbt/include/starter_project
+[0m18:32:42.086790 [info ] [MainThread]: Setting up your profile.
+[0m18:49:41.028830 [info ] [MainThread]: Profile energy_flow written to /home/mohamed/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m18:49:41.578378 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m18:49:41.608767 [info ] [MainThread]: dbt version: 1.12.0
+[0m18:49:41.609744 [info ] [MainThread]: python version: 3.14.4
+[0m18:49:41.611783 [info ] [MainThread]: python path: /home/mohamed/airflow-env/bin/python3
+[0m18:49:41.617569 [info ] [MainThread]: os info: Linux-7.0.0-27-generic-x86_64-with-glibc2.43
+[0m18:49:42.679386 [info ] [MainThread]: Using profiles dir at /home/mohamed/.dbt
+[0m18:49:42.681311 [info ] [MainThread]: Using profiles.yml file at /home/mohamed/.dbt/profiles.yml
+[0m18:49:42.682062 [info ] [MainThread]: Using dbt_project.yml file at /home/mohamed/energy-flow-intelligence/energy_flow/dbt_project.yml
+[0m18:49:42.682799 [info ] [MainThread]: adapter type: bigquery
+[0m18:49:42.683428 [info ] [MainThread]: adapter version: 1.12.0
+[0m18:49:43.013323 [info ] [MainThread]: Configuration:
+[0m18:49:43.014429 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:49:43.017468 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m18:49:43.018789 [info ] [MainThread]: Required dependencies:
+[0m18:49:43.026336 [debug] [MainThread]: Executing "git --help"
+[0m18:49:43.228358 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:49:43.230932 [debug] [MainThread]: STDERR: "b''"
+[0m18:49:43.232328 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:49:43.233051 [info ] [MainThread]: Connection:
+[0m18:49:43.233851 [info ] [MainThread]:   method: oauth
+[0m18:49:43.234583 [info ] [MainThread]:   database: project-da2d9305-97cf-4aec-9f3
+[0m18:49:43.235619 [info ] [MainThread]:   execution_project: project-da2d9305-97cf-4aec-9f3
+[0m18:49:43.236550 [info ] [MainThread]:   schema: energy_data
+[0m18:49:43.237432 [info ] [MainThread]:   location: EU
+[0m18:49:43.238849 [info ] [MainThread]:   priority: interactive
+[0m18:49:43.239814 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m18:49:43.240773 [info ] [MainThread]:   reservation: None
+[0m18:49:43.241516 [info ] [MainThread]:   impersonate_service_account: None
+[0m18:49:43.242244 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m18:49:43.242958 [info ] [MainThread]:   job_retries: 1
+[0m18:49:43.243733 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m18:49:43.244418 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m18:49:43.245125 [info ] [MainThread]:   job_link_info_level_log: False
+[0m18:49:43.245983 [info ] [MainThread]:   timeout_seconds: 300
+[0m18:49:43.246811 [info ] [MainThread]:   client_id: None
+[0m18:49:43.247600 [info ] [MainThread]:   token_uri: None
+[0m18:49:43.248464 [info ] [MainThread]:   compute_region: None
+[0m18:49:43.249370 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m18:49:43.250228 [info ] [MainThread]:   gcs_bucket: None
+[0m18:49:43.251045 [info ] [MainThread]:   dataproc_batch: None
+[0m18:49:43.281754 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m18:49:43.990705 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m18:49:43.991814 [debug] [MainThread]: On debug: select 1 as id
+[0m18:49:43.997571 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:49:49.350925 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-da2d9305-97cf-4aec-9f3&j=bq:EU:8a188b39-423e-4c62-9747-a44df3a37447&page=queryresults
+[0m18:49:49.579593 [debug] [MainThread]: SQL status: OK in 0.225 seconds
+[0m18:49:50.369680 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m18:49:50.370625 [info ] [MainThread]: [32mAll checks passed![0m
+[0m18:49:50.371620 [info ] [MainThread]: Your new dbt project "energy_flow" was created!
+Initialized new project in /home/mohamed/energy-flow-intelligence/energy_flow/energy_flow
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:49:50.384088 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 1076.8785, "process_in_blocks": "86504", "process_kernel_time": 2.664873, "process_mem_max_rss": "247448", "process_out_blocks": "104", "process_user_time": 7.800264}
+[0m18:49:50.394212 [debug] [MainThread]: Command `dbt init` succeeded at 18:49:50.393708 after 1076.90 seconds
+[0m18:49:50.398870 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m18:49:50.400017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1f962a56e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1f7f227890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1f7f298160>]}
+[0m18:49:50.402971 [debug] [MainThread]: Flushing usage events
+[0m18:49:51.018853 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:56:09.449590 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6e30503770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6e32302710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6e2ec4b9d0>]}
+
+
+============================== 18:56:09.468176 | 6b00f441-4eaa-431a-b52a-ae7e1be878f9 ==============================
+[0m18:56:09.468176 [info ] [MainThread]: Running with dbt=1.12.0
+[0m18:56:09.471151 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'log_path': 'logs', 'static_parser': 'True', 'use_experimental_parser': 'False', 'debug': 'False', 'indirect_selection': 'eager', 'warn_error': 'None', 'partial_parse': 'True', 'introspect': 'True', 'write_json': 'True', 'profiles_dir': '/home/mohamed/.dbt', 'hints_enabled': 'True', 'printer_width': '80', 'invocation_command': 'dbt init dbt', 'use_colors': 'True', 'empty': 'None', 'target_path': 'None', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'version_check': 'True', 'maximum_seed_size_mib': '1', 'log_format': 'default'}
+[0m18:56:20.893941 [debug] [MainThread]: Starter project path: /home/mohamed/airflow-env/lib/python3.14/site-packages/dbt/include/starter_project
+[0m18:56:20.906709 [info ] [MainThread]: Setting up your profile.
+[0m18:56:45.234914 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m18:56:45.236148 [info ] [MainThread]: dbt version: 1.12.0
+[0m18:56:45.236842 [info ] [MainThread]: python version: 3.14.4
+[0m18:56:45.237523 [info ] [MainThread]: python path: /home/mohamed/airflow-env/bin/python3
+[0m18:56:45.238322 [info ] [MainThread]: os info: Linux-7.0.0-27-generic-x86_64-with-glibc2.43
+[0m18:56:49.743040 [info ] [MainThread]: Using profiles dir at /home/mohamed/.dbt
+[0m18:56:49.743913 [info ] [MainThread]: Using profiles.yml file at /home/mohamed/.dbt/profiles.yml
+[0m18:56:49.747097 [info ] [MainThread]: Using dbt_project.yml file at /home/mohamed/energy-flow-intelligence/energy_flow/dbt_project.yml
+[0m18:56:49.747809 [info ] [MainThread]: adapter type: bigquery
+[0m18:56:49.748442 [info ] [MainThread]: adapter version: 1.12.0
+[0m18:56:51.202247 [info ] [MainThread]: Configuration:
+[0m18:56:51.203185 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:56:51.204012 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m18:56:51.204697 [info ] [MainThread]: Required dependencies:
+[0m18:56:51.205386 [debug] [MainThread]: Executing "git --help"
+[0m18:56:51.305262 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:56:51.306406 [debug] [MainThread]: STDERR: "b''"
+[0m18:56:51.307287 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:56:51.308261 [info ] [MainThread]: Connection:
+[0m18:56:51.309217 [info ] [MainThread]:   method: oauth
+[0m18:56:51.310020 [info ] [MainThread]:   database: project-da2d9305-97cf-4aec-9f3
+[0m18:56:51.310902 [info ] [MainThread]:   execution_project: project-da2d9305-97cf-4aec-9f3
+[0m18:56:51.311729 [info ] [MainThread]:   schema: energy_data
+[0m18:56:51.312684 [info ] [MainThread]:   location: EU
+[0m18:56:51.313848 [info ] [MainThread]:   priority: interactive
+[0m18:56:51.315031 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m18:56:51.316402 [info ] [MainThread]:   reservation: None
+[0m18:56:51.317930 [info ] [MainThread]:   impersonate_service_account: None
+[0m18:56:51.319371 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m18:56:51.320228 [info ] [MainThread]:   job_retries: 1
+[0m18:56:51.321128 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m18:56:51.321917 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m18:56:51.322544 [info ] [MainThread]:   job_link_info_level_log: False
+[0m18:56:51.323270 [info ] [MainThread]:   timeout_seconds: 300
+[0m18:56:51.324015 [info ] [MainThread]:   client_id: None
+[0m18:56:51.324785 [info ] [MainThread]:   token_uri: None
+[0m18:56:51.325440 [info ] [MainThread]:   compute_region: None
+[0m18:56:51.326116 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m18:56:51.326902 [info ] [MainThread]:   gcs_bucket: None
+[0m18:56:51.327620 [info ] [MainThread]:   dataproc_batch: None
+[0m18:56:51.328845 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m18:56:52.203413 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m18:56:52.204254 [debug] [MainThread]: On debug: select 1 as id
+[0m18:56:52.205009 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:56:55.789200 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-da2d9305-97cf-4aec-9f3&j=bq:EU:6e372cd9-02b5-434d-88c1-e3ea4eff05f6&page=queryresults
+[0m18:56:56.003922 [debug] [MainThread]: SQL status: OK in 0.213 seconds
+[0m18:56:56.302375 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m18:56:56.304079 [info ] [MainThread]: [32mAll checks passed![0m
+[0m18:56:56.305516 [info ] [MainThread]: Your new dbt project "energy_flow" was created!
+Initialized new project in /home/mohamed/energy-flow-intelligence/energy_flow/energy_flow
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:56:56.307526 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 47.425518, "process_in_blocks": "89008", "process_kernel_time": 3.925735, "process_mem_max_rss": "259228", "process_out_blocks": "96", "process_user_time": 11.118793}
+[0m18:56:56.308629 [debug] [MainThread]: Command `dbt init` succeeded at 18:56:56.308399 after 47.43 seconds
+[0m18:56:56.309422 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m18:56:56.310730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6e2eea56e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6e17e46f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6e17fb7020>]}
+[0m18:56:56.312358 [debug] [MainThread]: Flushing usage events
+[0m18:56:56.952775 [debug] [MainThread]: An error was encountered while trying to flush usage events
