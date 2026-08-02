@@ -30,6 +30,7 @@ def get_production_data(token):
     )
     return response.json()
 
+
 def save_to_json(data, filename="data/raw_production.json"):
     os.makedirs("data", exist_ok=True)
     with open(filename, "w") as f:
