@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: energy_data
+    database: project-da2d9305-97cf-4aec-9f3
+    schema: energy_data
+    tables:
+      - name: production_by_type
